@@ -17,8 +17,8 @@ function superpose(seq1, seq2, equiv) {
 
   rot = getrot(eqseq1, eqseq2);
 
-  seq1 = rotate(seq1);
-  seq2 = rotate(seq2);
+  seq1 = rotate(seq1, rot);
+  seq2 = rotate(seq2, rot);
 
   res = {
     seq1: seq1,

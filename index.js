@@ -5,6 +5,10 @@ function gdt(seq1, seq2, equiv, cutoff) {
 	var rotres;
 
 	var gtdres;
+	var simfunc;
+	var gss;
+
+	simfunc = makesimfunc(cutoff);
 
 	icount = 0;
 	memory = [];
@@ -14,7 +18,7 @@ function gdt(seq1, seq2, equiv, cutoff) {
 		seq1 = rotres.seq1;
 		seq2 = rotres.seq2;
 
-		equiv = recalcequiv(seq1, seq2, cutoff);
+		equiv = recalcequiv(seq1, seq2, simfunc, gss);
 		memory = memupd(memory, equiv);
 	}
 

@@ -1,4 +1,4 @@
-var MEMLEN = 8;
+var MEMLEN = require('../obj/memlen');
 
 function memcond(memory) {
   var len;
