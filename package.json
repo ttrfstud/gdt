@@ -16,6 +16,8 @@
     "url": "https://github.com/ttrfstud/gdt/issues"
   },
   "dependencies": {
-    "mocha": "~1.18.2"
+    "mocha": "~1.18.2",
+    "mmult": "0.0.0",
+    "transpose": "0.0.0"
   }
 }

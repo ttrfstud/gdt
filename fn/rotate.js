@@ -1,12 +1,12 @@
+var mmult = require('mmult');
+var transpose = require('transpose');
+
 function rotate(seq, rotm) {
-  var len;
-  var i;
+  seq = mmult(rotm, transpose(seq));
 
-  len = seq.length;
-
-  for (i = 0; i < len; i++) {
-    seq[i] = mmult(rotm, transpose(seq[i]));
-  }
+  seq = transpose(seq);
 
   return seq;
 }
+
+module.exports = rotate;
