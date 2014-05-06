@@ -1,4 +1,6 @@
 var MEMLEN = require('../obj/memlen');
+var lenequiv = require('./lenequiv');
+var copy = require('./copy');
 
 function memupd(memory, equiv) {
   var len;
@@ -13,10 +15,7 @@ function memupd(memory, equiv) {
     cmemory.shift();
   }
 
-  cmemory.push({
-    len: lenequiv(equiv),
-    equiv: equiv
-  });
+  cmemory.push(equiv);
 
   return cmemory;
 }

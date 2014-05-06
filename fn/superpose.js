@@ -10,8 +10,8 @@ function superpose(seq1, seq2, equiv) {
 
   var res;
 
-  eqseq1 = makeeqseq(seq1, equiv.tgt);
-  eqseq2 = makeeqseq(seq2, equiv.exp);
+  eqseq1 = makeeqseq(seq1, equiv.equiv.exp); // i
+  eqseq2 = makeeqseq(seq2, equiv.equiv.tgt); // j !
 
   /** must be of same len ! **/
 

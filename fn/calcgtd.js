@@ -1,8 +1,7 @@
-var kabsch = require('kabsch');
 var caperc = require('./caperc');
 var makeeqseq = require('./makeeqseq');
 
-function calcgtd(seq1, seq2, equiv) {
+function calcgtd(seq1, seq2, equiv, rmsdc) {
   var num;
   var perc;
   var rmsdloc;
@@ -17,8 +16,8 @@ function calcgtd(seq1, seq2, equiv) {
   res = {
     num: equiv.len;
     perc: caperc(seq1, seq2, equiv),
-    rmsdloc: kabsch(eqseq1, eqseq2),
-    rmsdall: kabsch(seq1, seq2);
+    rmsdloc: rmsdc(eqseq1, eqseq2),
+    rmsdall: rmsdc(seq1, seq2);
   }
 }
 
