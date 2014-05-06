@@ -18,6 +18,7 @@
   "dependencies": {
     "mocha": "~1.18.2",
     "mmult": "0.0.0",
-    "transpose": "0.0.0"
+    "transpose": "0.0.0",
+    "smith-waterman": "0.0.0"
   }
 }

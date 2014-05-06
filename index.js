@@ -1,16 +1,13 @@
 function gdt(seq1, seq2, equiv, cutoff) {
 	var memory;
-	var icount;
-
 	var rotres;
 
-	var gtdres;
 	var simfunc;
-	var gss;
+	
+	var gtdres;
 
 	simfunc = makesimfunc(cutoff);
 
-	icount = 0;
 	memory = [];
 
 	while(memcond(memory)) {
