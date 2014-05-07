@@ -1,6 +1,6 @@
 var transformequiv = require('./transformequiv');
 
-function recalculateequiv(seq1, seq2, sw, simfunc, gss) {
+function recalcequiv(seq1, seq2, sw, simfunc, gss) {
   var swres;
   var transfd;
 
@@ -10,4 +10,4 @@ function recalculateequiv(seq1, seq2, sw, simfunc, gss) {
   return transfd;
 }
 
-module.exports = recalculateequiv;
+module.exports = recalcequiv;
