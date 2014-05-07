@@ -9,6 +9,11 @@
   {
     tgt: [3, 2, 1],
     exp: [3, 2, 1]
+  } ->
+
+  {
+    tgt: [1, 2, 3],
+    exp: [1, 2, 3]
   }
 
   or
@@ -38,6 +43,11 @@
   {
     exp: [4, 2, 1],
     tgt: [5, 4, 3]
+  } ->
+
+  {
+    exp: [1, 2, 4],
+    tgt: [3, 4, 5]
   }
 **/
 
@@ -47,29 +57,45 @@ function transformequiv(equiv) {
   var teqiuiv;
   var curtgt, curexp;
 
- len = equiv.length;
+  var res;
+  var rlen;
 
+  len = equiv.length;
+  rlen = 0;
 
- curtgt = equiv[len - 1].j;
- curexp = equiv[len - 1].i;
- tequiv = { tgt: [], exp: [] };
+  curtgt = equiv[len - 1].j;
+  curexp = equiv[len - 1].i;
+  tequiv = {
+    tgt: [],
+    exp: []
+  };
 
- if (curtgt && curexp) {
-   tequiv.tgt.unshift(curtgt);
-   tequiv.exp.unshift(curexp);
- }
+  if (curtgt && curexp) {
+    tequiv.tgt.unshift(curtgt);
+    tequiv.exp.unshift(curexp);
+    rlen++;
+  }
 
- for (i = len - 2; i >= 0; i++) {
-  if (curtgt !== equiv[i].j &&
+  for (i = len - 2; i >= 0; i--) {
+    if (curtgt !== equiv[i].j &&
       curexp !== equiv[i].i) {
-     curtgt = equiv[i].j;
-     curexp = equiv[i].i;
-     tequiv.tgt.unshift(curtgt);
-     tequiv.exp.unshift(curexp);
-  } 
- }
+      curtgt = equiv[i].j;
+      curexp = equiv[i].i;
+      tequiv.tgt.unshift(curtgt);
+      tequiv.exp.unshift(curexp);
+      rlen++;
+    }
+  }
 
- return tequiv;
+  tequiv.tgt = tequiv.tgt.reverse();
+  tequiv.exp = tequiv.exp.reverse();
+
+  res = {
+    equiv: tequiv,
+    len: rlen++
+  };
+
+  return res;
 }
 
 module.exports = transformequiv;

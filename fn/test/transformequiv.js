@@ -13,8 +13,11 @@ describe('transformequiv', function () {
     ];
 
     assert.deepEqual(transformequiv(equiv), {
-      tgt: [1, 2, 3, 4],
-      exp: [1, 2, 3, 4]
+      equiv: {
+        tgt: [1, 2, 3, 4],
+        exp: [1, 2, 3, 4]
+      },
+      len: 4
     });
 
     done();
@@ -31,8 +34,11 @@ describe('transformequiv', function () {
     ];    
 
     assert.deepEqual(transformequiv(equiv), {
-      tgt: [5],
-      exp: [2]
+      equiv: {
+        tgt: [2],
+        exp: [5]
+      },
+      len: 1
     });
 
     done();
@@ -51,8 +57,11 @@ describe('transformequiv', function () {
     ];
 
     assert.deepEqual(transformequiv(equiv), {
-      tgt: [2, 5],
-      exp: [2, 3]
+      equiv: {
+        tgt: [2, 5],
+        exp: [2, 3]
+      },
+      len: 2
     });
 
     done();

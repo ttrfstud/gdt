@@ -10,8 +10,10 @@ function calcgdt(seq1, seq2, equiv, rmsdc) {
 
   var res;
 
-  eqseq1 = makeeqseq(seq1, equiv.exp);
-  eqseq2 = makeeqseq(seq2, equiv.tgt);
+  eqseq1 = makeeqseq(seq1, equiv.equiv.exp);
+  eqseq2 = makeeqseq(seq2, equiv.equiv.tgt);
+
+  console.log(eqseq1, eqseq2);
 
   res = {
     num: equiv.len,
@@ -19,6 +21,8 @@ function calcgdt(seq1, seq2, equiv, rmsdc) {
     rmsdloc: rmsdc(eqseq1, eqseq2),
     rmsdall: rmsdc(seq1, seq2)
   };
+
+  return res;
 }
 
 module.exports  = calcgdt;

@@ -8,12 +8,9 @@ describe('memupd', function () {
 
     var res;
 
-    equiv = [
-      {i: 3, j: 3},
-      {i: 2, j: 2},
-      {i: 1, j: 1},
-      {i: 0, j: 1}
-    ];
+    equiv = {
+      len: -60
+    };
 
     memory = [
       {len: 1},
@@ -27,7 +24,7 @@ describe('memupd', function () {
       {len: 1},
       {len: 2},
       {len: 3},
-      {len: 3, equiv: equiv }
+      {len: -60 }
     ])
 
     assert.deepEqual(memory, [
@@ -45,12 +42,9 @@ describe('memupd', function () {
 
     var res;
 
-    equiv = [
-      {i: 3, j: 3},
-      {i: 2, j: 2},
-      {i: 1, j: 1},
-      {i: 0, j: 1}
-    ];
+    equiv = {
+      len: -30
+    };
 
     memory = [
       {len: 14},
@@ -73,7 +67,7 @@ describe('memupd', function () {
       {len: 68},
       {len: 75},
       {len: 81},
-      {len: 3, equiv: equiv }
+      {len: -30 }
     ])
 
     assert.deepEqual(memory, [
