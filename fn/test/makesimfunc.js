@@ -20,11 +20,8 @@ describe('makesimfunc', function () {
     point2 = [1, 2, 3.1];
     point3 = [1, 2, 3.212];
 
-    console.log('p1, p2');
     assert.equal(simfunc(point1, point2), 1);
-    console.log('p2, p3');
     assert.equal(simfunc(point2, point3), -1/3);
-    console.log('p1, p3');
     assert.equal(simfunc(point1, point3), -1/3);
 
     done();
@@ -47,11 +44,8 @@ describe('makesimfunc', function () {
     point2 = [1, 2.01, 3.09];
     point3 = [1.004, 2, 2.997];
 
-    console.log('p1, p2');
     assert.equal(simfunc(point1, point2), 1);
-    console.log('p2, p3');
     assert.equal(simfunc(point2, point3), 1);
-    console.log('p1, p3');
     assert.equal(simfunc(point1, point3), 1);
 
     done();
@@ -74,11 +68,8 @@ describe('makesimfunc', function () {
     point2 = [1, 2.1, 3.19];
     point3 = [1.014, 2, 2.0];
 
-    console.log('p1, p2');
     assert.equal(simfunc(point1, point2), -1/3);
-    console.log('p2, p3');
     assert.equal(simfunc(point2, point3), -1/3);
-    console.log('p1, p3');
     assert.equal(simfunc(point1, point3), -1/3);
 
     done();

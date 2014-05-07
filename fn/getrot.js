@@ -36,8 +36,6 @@ function getrot(seq1, seq2) {
   sigma = sqrtd(eigenvals);
   isigma = invertd(sigma);
 
-  console.log(isigma);
-
   v = mmult(mmult(r, w), isigma);
 
   /** end of identical part **/
