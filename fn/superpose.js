@@ -1,12 +1,11 @@
 var makeeqseq = require('./makeeqseq');
 var rotate = require('./rotate');
-var getrot = require('./getrot');
 
 /** list of initial equivalencies comes in format:
   { tgt: [], exp: [] }, where each array contains indices of seq positions
   that are equivalent in tgt and exp, correspondingly  
 **/
-function superpose(seq1, seq2, equiv) {
+function superpose(seq1, seq2, equiv, getrot) {
   var eqseq1, eqseq2;
   var rot;
 

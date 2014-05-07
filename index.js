@@ -12,7 +12,7 @@ function gdt(seq1, seq2, equiv, cutoff) {
 	memory.push(equiv);
 
 	while(memcond(memory)) {
-		rotres = superpose(seq1, seq2, equiv);
+		rotres = superpose(seq1, seq2, equiv, getrot);
 		seq1 = rotres.seq1;
 		seq2 = rotres.seq2;
 
