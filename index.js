@@ -1,3 +1,11 @@
+var makesimfunc = require('./fn/makesimfunc');
+var memcond = require('./fn/memcond');
+var superpose = require('./fn/superpose');
+var recalcequiv = require('./fn/recalcequiv');
+var memupd = require('./fn/memupd');
+var memfetch = require('./fn/memfetch');
+var calcgtd = require('./fn/calcgtd');
+
 function gdt(seq1, seq2, equiv, cutoff) {
 	var memory;
 	var rotres;
@@ -9,7 +17,7 @@ function gdt(seq1, seq2, equiv, cutoff) {
 	simfunc = makesimfunc(cutoff);
 
 	memory = [];
-	memory.push(equiv);
+	memory.push(addequivlen(equiv));
 
 	while(memcond(memory)) {
 		rotres = superpose(seq1, seq2, equiv, getrot);

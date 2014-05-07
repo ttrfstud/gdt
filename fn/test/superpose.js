@@ -12,6 +12,8 @@ describe('superpose', function () {
 
     var res;
 
+    var flag;
+
     getrot = function (s1, s2) {
       assert.deepEqual(s1, [
         [2, 3, 3],
@@ -22,6 +24,8 @@ describe('superpose', function () {
         [1, 2, 2],
         [2, 1, 1]
       ]);
+
+      flag = true;
 
       return [[2, 0, 0], [0, 2, 0], [0, 0, 2]];
     };
@@ -64,6 +68,8 @@ describe('superpose', function () {
       ]
     });
 
+    assert(flag);
+
     done();
   });
 
@@ -77,6 +83,8 @@ describe('superpose', function () {
 
     var res;
 
+    var flag;
+
     getrot = function (s1, s2) {
       assert.deepEqual(s1, [
         [2, 3, 3],
@@ -85,6 +93,8 @@ describe('superpose', function () {
       assert.deepEqual(s2, [
         [2, 1, 1]
       ]);
+
+      flag = true;
 
       return [[3, 0, 0], [0, 3, 0], [0, 0, 3]];
     };
@@ -118,6 +128,8 @@ describe('superpose', function () {
         [3, 3, 3]
       ]
     });
+
+    assert(flag);
 
     done();
   });
