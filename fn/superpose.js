@@ -1,4 +1,6 @@
-var kabsch = require('kabsch');
+var makeeqseq = require('./makeeqseq');
+var rotate = require('./rotate');
+var getrot = require('./getrot');
 
 /** list of initial equivalencies comes in format:
   { tgt: [], exp: [] }, where each array contains indices of seq positions
