@@ -66,4 +66,20 @@ describe('transformequiv', function () {
 
     done();
   });
+
+  it('not equivalent at all', function (done) {
+    var equiv;
+
+    equiv = [];
+
+    assert.deepEqual(transformequiv(equiv), {
+      equiv: {
+        tgt: [],
+        exp: []
+      },
+      len: 0
+    });
+
+    done();
+  });
 });

@@ -63,8 +63,11 @@ function transformequiv(equiv) {
   len = equiv.length;
   rlen = 0;
 
-  curtgt = equiv[len - 1].j;
-  curexp = equiv[len - 1].i;
+  if (len) {
+    curtgt = equiv[len - 1].j;
+    curexp = equiv[len - 1].i;
+  }
+  
   tequiv = {
     tgt: [],
     exp: []

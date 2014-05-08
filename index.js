@@ -4,7 +4,13 @@ var superpose = require('./fn/superpose');
 var recalcequiv = require('./fn/recalcequiv');
 var memupd = require('./fn/memupd');
 var memfetch = require('./fn/memfetch');
-var calcgtd = require('./fn/calcgtd');
+var calcgdt = require('./fn/calcgdt');
+var getrot = require('./fn/getrot');
+var addequivlen = require('./fn/addequivlen');
+var gss = require('./fn/gss');
+
+var sw = require('smith-waterman');
+var kabsch = require('kabsch');
 
 function gdt(seq1, seq2, equiv, cutoff) {
 	var memory;
@@ -17,9 +23,9 @@ function gdt(seq1, seq2, equiv, cutoff) {
 	simfunc = makesimfunc(cutoff);
 
 	memory = [];
-	memory.push(addequivlen(equiv));
+	memory.push( equiv = addequivlen(equiv) );
 
-	while(memcond(memory)) {
+	while(module.exports.memcond(memory)) {
 		rotres = superpose(seq1, seq2, equiv, getrot);
 		seq1 = rotres.seq1;
 		seq2 = rotres.seq2;
@@ -29,9 +35,11 @@ function gdt(seq1, seq2, equiv, cutoff) {
 	}
 
 	equiv = memfetch(memory);
-	gtdres = calcgtd(seq1, seq2, equiv, kabsch);
+	gtdres = calcgdt(seq1, seq2, equiv, kabsch);
 
 	return gtdres;
 }
 
 module.exports = gdt;
+
+module.exports.memcond = memcond;

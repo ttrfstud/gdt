@@ -1,6 +1,8 @@
 var caperc = require('./caperc');
 var makeeqseq = require('./makeeqseq');
 
+var transpose = require('transpose');
+
 function calcgdt(seq1, seq2, equiv, rmsdc) {
   var num;
   var perc;
@@ -16,8 +18,8 @@ function calcgdt(seq1, seq2, equiv, rmsdc) {
   res = {
     num: equiv.len,
     perc: caperc(seq1, seq2, equiv),
-    rmsdloc: rmsdc(eqseq1, eqseq2),
-    rmsdall: rmsdc(seq1, seq2)
+    rmsdloc: rmsdc(transpose(eqseq1), transpose(eqseq2)),
+    rmsdall: rmsdc(transpose(seq1), transpose(seq2))
   };
 
   return res;

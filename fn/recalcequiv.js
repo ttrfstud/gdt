@@ -4,7 +4,7 @@ function recalcequiv(seq1, seq2, sw, simfunc, gss) {
   var swres;
   var transfd;
 
-  swres = sw(seq1, seq2, simfunc, gss);
+  swres = sw(seq1, seq2, gss, simfunc);
   transfd = transformequiv(swres);
 
   return transfd;

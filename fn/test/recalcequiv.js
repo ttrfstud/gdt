@@ -19,12 +19,12 @@ describe('recalcequiv', function () {
     simfunc = {};
     gss = {};
 
-    sw = function (sq1, sq2, sf, gs) {
+    sw = function (sq1, sq2, gs, sf) {
       assert.equal(seq1, sq1);
       assert.equal(seq2, sq2);
-
-      assert.equal(simfunc, sf);
+      
       assert.equal(gss, gs);
+      assert.equal(simfunc, sf);
 
       flag = true;
 
