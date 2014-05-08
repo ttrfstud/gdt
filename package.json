@@ -3,20 +3,11 @@
   "version": "0.0.0",
   "description": "global distance test algorithm",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ttrfstud/gdt.git"
   },
-  "author": "",
-  "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/ttrfstud/gdt/issues"
-  },
   "dependencies": {
-    "mocha": "~1.18.2",
     "mmult": "0.0.0",
     "transpose": "0.0.0",
     "smith-waterman": "0.0.0",
