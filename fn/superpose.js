@@ -18,8 +18,13 @@ function superpose(seq1, seq2, equiv, getrot) {
 
   rot = getrot(eqseq1, eqseq2);
 
+
   seq1 = rotate(seq1, rot);
   seq2 = rotate(seq2, rot);
+
+  console.log('0---------');
+  console.log(seq1, seq2);
+  console.log('-----------');
 
   res = {
     seq1: seq1,

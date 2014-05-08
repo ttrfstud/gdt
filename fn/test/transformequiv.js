@@ -82,4 +82,23 @@ describe('transformequiv', function () {
 
     done();
   });
+
+  it('test3', function (done) {
+    var equiv;
+
+    equiv = [ 
+      { i: 1, j: 1 }, 
+      { i: 0, j: 0 } 
+    ];
+
+    assert.deepEqual(transformequiv(equiv), {
+      equiv: {
+        tgt: [0, 1],
+        exp: [0, 1],
+      },
+      len: 2
+    });
+
+    done();
+  });
 });

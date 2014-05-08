@@ -1,3 +1,5 @@
+var isdef = require('./isdef');
+
 /** 
   [
     {i: 3, j: 3},
@@ -67,13 +69,13 @@ function transformequiv(equiv) {
     curtgt = equiv[len - 1].j;
     curexp = equiv[len - 1].i;
   }
-  
+
   tequiv = {
     tgt: [],
     exp: []
   };
 
-  if (curtgt && curexp) {
+  if (isdef(curtgt) && isdef(curexp)) {
     tequiv.tgt.unshift(curtgt);
     tequiv.exp.unshift(curexp);
     rlen++;
