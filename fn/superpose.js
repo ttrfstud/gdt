@@ -22,10 +22,6 @@ function superpose(seq1, seq2, equiv, getrot) {
   seq1 = rotate(seq1, rot);
   seq2 = rotate(seq2, rot);
 
-  console.log('0---------');
-  console.log(seq1, seq2);
-  console.log('-----------');
-
   res = {
     seq1: seq1,
     seq2: seq2

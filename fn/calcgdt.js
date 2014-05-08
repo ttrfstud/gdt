@@ -15,9 +15,6 @@ function calcgdt(seq1, seq2, equiv, rmsdc) {
   eqseq1 = makeeqseq(seq1, equiv.equiv.exp);
   eqseq2 = makeeqseq(seq2, equiv.equiv.tgt);
 
-  console.log('11', eqseq1, equiv);
-  console.log('22', eqseq2);
-
   res = {
     num: equiv.len,
     perc: caperc(seq1, seq2, equiv),

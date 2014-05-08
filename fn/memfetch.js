@@ -7,8 +7,6 @@ function memfetch(memory) {
 
   len = memory.length;
 
-  console.log('memlen!', len, JSON.stringify(memory));
-
   for (i = 0; i < len; i++) {
     if (max.len <= memory[i].len) {
       max = memory[i];

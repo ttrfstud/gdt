@@ -50,8 +50,6 @@ describe('gdt', function () {
 
     res = gdt(seq1, seq2, equiv, cutoff);
 
-    console.log(res);
-
     assert.deepEqual(res, {
       num: 2,
       perc: 0.5,
@@ -104,8 +102,6 @@ describe('gdt', function () {
     cutoff = 4;
 
     res = gdt(seq1, seq2, equiv, cutoff);
-
-    console.log(res);
 
     assert.deepEqual(res, {
       num: 3,

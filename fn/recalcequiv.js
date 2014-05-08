@@ -6,9 +6,7 @@ function recalcequiv(seq1, seq2, sw, simfunc, gss) {
 
   swres = sw(seq1, seq2, gss, simfunc);
 
-  console.log(swres);
   transfd = transformequiv(swres);
-  console.log(transfd);
 
   return transfd;
 }
