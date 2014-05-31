@@ -1,6 +1,6 @@
 {
   "name": "gdt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "global distance test algorithm",
   "main": "index.js",
   "repository": {
@@ -12,6 +12,6 @@
     "transpose": "0.0.2",
     "smith-waterman": "0.0.0",
     "jacobi-eigenvalue": "0.0.4",
-    "kabsch": "0.0.1"
+    "kabsch": "0.0.2"
   }
 }
